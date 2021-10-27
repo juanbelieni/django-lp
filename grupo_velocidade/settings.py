@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'telegram2'
-    #teste
+    'telegram2',
+    'todo',
 ]
 
 MIDDLEWARE = [
