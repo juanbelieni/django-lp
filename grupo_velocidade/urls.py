@@ -18,6 +18,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('todo/', include('todo.urls')),
+    path(r'todo/', include('todo.urls')),
     path(r'telegram2/', include("telegram2.urls")),
+    path(r'whatsapp2/', include("whatsapp_2.urls")),
 ]
