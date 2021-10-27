@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todo/', include('todo.urls')),
+    path(r'telegram2/', include("telegram2.urls")),
 ]
