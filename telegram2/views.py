@@ -7,4 +7,5 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("<h1>TELEGRAM2.apk baixar</h1>")
 
-# Create your views here.
+def introducao(request):
+    return render(request, 'telegram2/introducao.html')
