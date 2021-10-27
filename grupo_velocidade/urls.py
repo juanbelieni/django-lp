@@ -21,4 +21,5 @@ urlpatterns = [
     path(r'todo/', include('todo.urls')),
     path(r'telegram2/', include("telegram2.urls")),
     path(r'whatsapp2/', include("whatsapp_2.urls")),
+    path(r'app_django/', include("app_django.urls")),
 ]
