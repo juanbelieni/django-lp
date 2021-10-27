@@ -23,4 +23,5 @@ urlpatterns = [
     path(r'whatsapp2/', include("whatsapp_2.urls")),
     path(r'app_django/', include("app_django.urls")),
     path(r'appCleomar/', include('appCleomar.urls')),
+    path(r'instagram2/', include('instagram2.urls')),
 ]
