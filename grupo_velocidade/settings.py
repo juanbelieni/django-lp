@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whatsapp_2',
+    'telegram2',
+    'todo',
 ]
 
 MIDDLEWARE = [
