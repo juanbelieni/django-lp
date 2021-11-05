@@ -1,6 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
 # Create your views here.
 def index(request):
-    return HttpResponse('<h1>TODO APP</h1>')
+    return HttpResponse("<h1>TODO APP</h1>")
+
+
+# Return all todos
+def todos(request):
+    return render(request, "todo/index.html")
