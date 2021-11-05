@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, reverse
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
@@ -9,3 +9,11 @@ def index(request):
 
 def introducao(request):
     return render(request, 'telegram2/introducao.html')
+
+def post(request, text):
+    return HttpResponse(f"<b> Publicação: {text} <\b>")
+
+def redireciona_inicio(request):
+    url = reverse("introducao")
+    return HttpResponseRedirect(url)
+    
