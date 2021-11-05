@@ -6,3 +6,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("<h1> Eu odeio tudo </h1>")
+
+
+def contacts(request):
+    return render(request, 'whatsapp_2/contacts.html')

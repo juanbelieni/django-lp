@@ -6,3 +6,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("<h1> Eu odeio tudo </h1>")
+
+
+def elogio(request):
+    return render(request, 'appCleomar/elogio.html')
