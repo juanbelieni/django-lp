@@ -10,3 +10,7 @@ def index(request):
 
 def elogio(request):
     return render(request, 'appCleomar/elogio.html')
+
+
+def todo(request, id):
+    return HttpResponse(f"<h1>TODO {h1}</h1>")
