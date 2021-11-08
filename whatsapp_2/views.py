@@ -16,3 +16,10 @@ def profile(request, param):
 def redirect_to_contacts(request):
     url = reverse("contacts")
     return HttpResponseRedirect(url)
+
+def secret(request):
+    context = {
+        "name": "Tio Rafa",
+        "beloved": "Cowboy Bebop"
+    }
+    return render(request, 'whatsapp_2/secret.html', context)
