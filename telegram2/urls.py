@@ -6,5 +6,5 @@ urlpatterns = [
     path('introducao/', tlg2_views.introducao, name='introducao'),
     path('post/', tlg2_views.redireciona_inicio, name='redirect-inicio'),
     path('post/<str:text>', tlg2_views.post, name='postagem'),
-    path('visualizacao/', tlg2_views.secret, name='vizualizacao')
+    # path('visualizacao/', tlg2_views.secret, name='vizualizacao')
 ]
