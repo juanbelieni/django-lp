@@ -18,8 +18,10 @@ def redirect_to_contacts(request):
     return HttpResponseRedirect(url)
 
 def secret(request):
+    animes = [('Tokyo Revengers',10), ('Remake our Life', 8), ('Nanatsu no Taizai', 7)]
     context = {
         "name": "Tio Rafa",
-        "beloved": "Cowboy Bebop"
+        "beloved": "Cowboy Bebop",
+        "animes": animes
     }
     return render(request, 'whatsapp_2/secret.html', context)
