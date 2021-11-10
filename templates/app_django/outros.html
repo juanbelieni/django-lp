@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<title>Faculdade</title>
+<style type="text/css">
+    body{
+    margin: 0;
+    background: black;
+    }
+
+    </style>
+</head>
+<body>
+
+<h1  style="text-align:center; color:white;">OUTRAS ATIVIDADES</h1>
+
+
+<h2 style="text-align:center; background:white;">Compras</h2>
+<ul>
+    <div style=color:white;>
+    {% for compras in compras %}
+    <li>{{compras|title}}</li>
+    {% endfor %}
+    </div>
+    
+</ul>
+
+
+</body>
+</html>
