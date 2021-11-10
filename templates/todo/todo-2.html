@@ -1,5 +1,5 @@
-<html>
-<body>
-    <h1>Todo 2: {{name}}</h1>
-</body>
-</html>
+{% include "todo/base.html" %}
+
+{% block content %}
+  <h1>Todo 2: {{name}}</h1>
+{% endblock content %}
