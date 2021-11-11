@@ -16,4 +16,14 @@ def post(request, text):
 def redireciona_inicio(request):
     url = reverse("introducao")
     return HttpResponseRedirect(url)
+
+def visualizacao(request):
+    filmes = ["A Origem", "Inferno", "Pearl Harbor", "Forest Gump"]
+    context = {
+        "nome": "Pedro",
+        "idade": 18,
+        "ocupacao": "desempregado",
+        "flmes favoritos": filmes
+    }
+    return render(request, 'telegram2/visualizacao.html', context)
     
