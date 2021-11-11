@@ -1,0 +1,33 @@
+{% extends "instagram2/"|add:perfil|add:".html" %}
+{% load static %}
+
+{% block meta%}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{user}}</title>
+    </head>
+{% endblock  %}
+
+{% block perfilSuperior %}
+    <p>{{ pfp|lower }}</p>
+
+        <h4>{{ user }}</h4>
+
+        <h1>Bio</h1>
+
+        <p>{{ bio }}</p>
+
+        <p>
+        Gosto de: | 
+        {% for item in gostos %}
+            {{item}} |
+        {% endfor %}</p>
+{% endblock  %}
+
+
+
+{% block cabecalho %}
+    <p>Aqui mora um cabeçalho</p>
+{% endblock cabecalho %}
