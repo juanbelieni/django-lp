@@ -11,11 +11,11 @@
     {{ nome|upper }} tem {{ idade }} anos e sua ocupação é {{ocupacao}}.<br>
     <br>
     <b>filmes favoritos</b>
-    <ul>
-        {% for filme filmes %}
-            <li>Nome: {{ filme}}/li>
+    <ol>
+        {% for filme in filmes %}
+            <li> {{ filme}}</li>
         {% endfor %}
-    </ul>
+    </ol>
     .
     <p>A hora é {% current_time "%Y-%m-%d %I:%M %p" %}.</p>
     
