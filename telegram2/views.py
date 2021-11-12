@@ -1,5 +1,6 @@
 from django.shortcuts import render, reverse
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
+
 
 # Create your views here.
 
@@ -11,19 +12,26 @@ def introducao(request):
     return render(request, 'telegram2/introducao.html')
 
 def post(request, text):
-    return HttpResponse(f"<b> Publicação: {text} <\b>")
-
+    if text=="abacaxi" or text=="morango":
+        return HttpResponse(f"<b>Gosto de {text}<b\>")
+    
+    if text=="melancia" or text=="cereja":
+        return HttpResponse(f"<b>Não gosto de {text}<b\>")
+    else:
+        raise Http404()
+        
 def redireciona_inicio(request):
     url = reverse("introducao")
     return HttpResponseRedirect(url)
 
 def visualizacao(request):
+    
     filmes = ["A Origem", "Inferno", "Pearl Harbor", "Forest Gump"]
     context = {
         "nome": "Pedro",
         "idade": 18,
         "ocupacao": "desempregado",
-        "flmes favoritos": filmes
+        "filmes": filmes
     }
     return render(request, 'telegram2/visualizacao.html', context)
     
