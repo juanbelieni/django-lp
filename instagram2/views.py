@@ -1,5 +1,5 @@
 from django.shortcuts import render, reverse
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect,Http404
 
 # Create your views here.
 def index(request):
@@ -25,10 +25,12 @@ def profile(request, param):
 
     elif param == "@yuri":
         lista_de_gostos = ["SVD","FGV","AL", "Siglas"]
-        pfp = "Imagem dele"
+        pfp = f"pfp_{param[1:]}.jpg"
         user = param
         nome = "Yuri"
         bio = "Sou professor e coordenador de Ciência de Dados"
+    else:
+        raise Http404()
 
     context = {
         "perfil": param[1:],
