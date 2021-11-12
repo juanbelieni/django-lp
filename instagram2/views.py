@@ -5,7 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect,Http404
 def index(request):
     return HttpResponse('<h1>IG2</h1>')
     
-def perfil(request):
+def feed(request):
     return render(request, "instagram2/index.html")
 
 def profile(request, param):
@@ -43,18 +43,7 @@ def profile(request, param):
 
     return render(request, f'instagram2/template.html', context)
 
-def redirect_to_perfil(request):
-    url = reverse("perfil")
+def redirect_to_feed(request):
+    url = reverse("feed")
     return HttpResponseRedirect(url)
 
-def tiorafa(request):
-    lista_de_gostos = ["Cowboy Bebop", "Cavaleiros do Zodiaco", "python", "engenharia"]
-
-    context = {
-        "pfp" : "Imagem do dedão",
-        "name": "Tio Rafa",
-        "user": "@TioR4fa",
-        "beloved": "Cowboy Bebop",
-        "gostos": lista_de_gostos
-    }
-    return render(request, 'instagram2/tioRafa.html', context)

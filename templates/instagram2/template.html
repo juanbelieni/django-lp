@@ -1,4 +1,4 @@
-{% extends "instagram2/"|add:perfil|add:".html" %}
+{% extends "instagram2/profile.html" %}
 {% load static %}
 
 <html lang="pt-br">
@@ -7,14 +7,15 @@
             <head>
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <link href="{% static "css/instagram2.css" %}" rel="stylesheet">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="{% static "css/instagram2.css" %}" rel="stylesheet">
+                
                 <title>{{user}}</title>
             </head>
         {% endblock  %}
 
         {% block perfilSuperior %}
-                <img src="{% static "images/pfp_"|add:perfil|add:".jpg" %}" alt="Imagem de perfil" width="100" height="100">
+                <img src="{% static "images/pfp_"|add:perfil|add:".jpg" %}" alt="Imagem de perfil" id="pfp">
 
                 <h4>{{ user }}</h4>
 
